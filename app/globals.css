@@ -4,45 +4,101 @@
 
 @layer base {
   * {
-    @apply border-gray-200;
+    @apply border-border;
   }
   
   body {
     @apply bg-bg text-gray-900;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
+  /* Button Components */
   .btn-primary {
-    @apply bg-shmoo-green text-white px-8 py-4 rounded-lg font-bold text-xl hover:bg-green-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95;
+    @apply bg-shmoo-green text-white px-8 py-4 rounded-lg font-bold text-xl hover:bg-green-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
   }
   
   .btn-outline {
-    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-200;
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
   }
   
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  /* Card Components */
   .card {
-    @apply bg-surface rounded-lg p-6 shadow-card;
+    @apply bg-surface rounded-lg p-6 shadow-card border border-border;
   }
   
+  .card-compact {
+    @apply bg-surface rounded-md p-4 shadow-card border border-border;
+  }
+  
+  /* Alert Components */
   .alert-warning {
-    @apply bg-warning-red text-white p-4 rounded-lg font-bold text-center;
+    @apply bg-warning-red text-white p-4 rounded-lg font-bold text-center border border-red-600;
   }
   
   .alert-info {
-    @apply bg-blue-100 text-blue-800 p-4 rounded-lg border border-blue-200;
+    @apply bg-blue-50 text-blue-800 p-4 rounded-lg border border-blue-200;
   }
   
+  .alert-success {
+    @apply bg-green-50 text-green-800 p-4 rounded-lg border border-green-200;
+  }
+  
+  /* Typography Components */
   .text-heading {
-    @apply text-3xl font-bold;
+    @apply text-3xl font-bold text-gray-900;
+  }
+  
+  .text-subheading {
+    @apply text-xl font-semibold text-gray-800;
   }
   
   .text-body {
-    @apply text-base font-normal leading-6;
+    @apply text-base font-normal leading-6 text-gray-700;
   }
   
   .text-caption {
-    @apply text-sm text-gray-600;
+    @apply text-sm text-muted-foreground;
+  }
+  
+  /* Progress Components */
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2 overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-shmoo-green to-accent transition-all duration-300 ease-out;
+  }
+  
+  /* Animation Classes */
+  .animate-click {
+    @apply animate-pulse-glow;
+  }
+  
+  .animate-success {
+    @apply animate-bounce-gentle;
+  }
+  
+  /* Container Classes */
+  .container-app {
+    @apply w-full px-4 py-6 max-w-md mx-auto;
+  }
+  
+  /* Utility Classes */
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 }
