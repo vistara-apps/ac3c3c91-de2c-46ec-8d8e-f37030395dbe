@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Shmoo Clicker",
+    "subtitle": "Built with Zara",
+    "description": "Shmoo Clicker is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://ac3c3c91de2c46ec8d8ef37030395dbe-63dr.vercel.app",
+    "splashImageUrl": "https://ac3c3c91de2c46ec8d8ef37030395dbe-63dr.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://ac3c3c91de2c46ec8d8ef37030395dbe-63dr.vercel.app/image.png",
+    "tagline": "Shmoo Clicker",
+    "screenshotUrls": [
+      "https://ac3c3c91de2c46ec8d8ef37030395dbe-63dr.vercel.app/screenshot.png",
+      "https://ac3c3c91de2c46ec8d8ef37030395dbe-63dr.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://ac3c3c91de2c46ec8d8ef37030395dbe-63dr.vercel.app/api/webhook"
+  }
+}
