@@ -9,74 +9,44 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        // Design system color tokens
-        primary: {
-          DEFAULT: "var(--primary)",
-          50: "var(--primary-50)",
-          100: "var(--primary-100)",
-          200: "var(--primary-200)",
-          300: "var(--primary-300)",
-          400: "var(--primary-400)",
-          500: "var(--primary-500)",
-          600: "var(--primary-600)",
-          700: "var(--primary-700)",
-          800: "var(--primary-800)",
-          900: "var(--primary-900)",
-          950: "var(--primary-950)",
-        },
-        secondary: {
-          DEFAULT: "var(--secondary)",
-          50: "var(--secondary-50)",
-          100: "var(--secondary-100)",
-          200: "var(--secondary-200)",
-          300: "var(--secondary-300)",
-          400: "var(--secondary-400)",
-          500: "var(--secondary-500)",
-          600: "var(--secondary-600)",
-          700: "var(--secondary-700)",
-          800: "var(--secondary-800)",
-          900: "var(--secondary-900)",
-          950: "var(--secondary-950)",
-        },
-        accent: {
-          DEFAULT: "var(--accent)",
-          50: "var(--accent-50)",
-          100: "var(--accent-100)",
-          200: "var(--accent-200)",
-          300: "var(--accent-300)",
-          400: "var(--accent-400)",
-          500: "var(--accent-500)",
-          600: "var(--accent-600)",
-          700: "var(--accent-700)",
-          800: "var(--accent-800)",
-          900: "var(--accent-900)",
-          950: "var(--accent-950)",
-        },
+        // Design system color tokens as specified
+        primary: "hsl(240 100% 50%)",
+        accent: "hsl(180 70% 50%)",
+        bg: "hsl(220 20% 98%)",
+        surface: "hsl(255 100% 100%)",
+        
+        // Shmoo-specific colors
+        'shmoo-green': '#10B981',
+        'warning-red': '#EF4444',
+        
+        // Additional semantic colors
         muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--muted-foreground)",
+          DEFAULT: "hsl(210 40% 98%)",
+          foreground: "hsl(215.4 16.3% 46.9%)",
         },
         destructive: {
-          DEFAULT: "var(--destructive)",
-          foreground: "var(--destructive-foreground)",
+          DEFAULT: "hsl(0 84.2% 60.2%)",
+          foreground: "hsl(210 40% 98%)",
         },
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
-        chart: {
-          1: "var(--chart-1)",
-          2: "var(--chart-2)",
-          3: "var(--chart-3)",
-          4: "var(--chart-4)",
-          5: "var(--chart-5)",
-        },
+        border: "hsl(214.3 31.8% 91.4%)",
+        input: "hsl(214.3 31.8% 91.4%)",
+        ring: "hsl(240 100% 50%)",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        sm: "4px",
+        md: "8px", 
+        lg: "12px",
+        xl: "16px",
+        "2xl": "24px",
+        "3xl": "32px",
+      },
+      spacing: {
+        sm: "4px",
+        md: "8px",
+        lg: "16px",
+      },
+      boxShadow: {
+        card: "0 1px 2px 0 hsla(0, 0%, 0%, 0.05)",
       },
       keyframes: {
         "accordion-down": {
@@ -87,10 +57,32 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "bounce-gentle": {
+          "0%, 100%": {
+            transform: "translateY(-5%)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+        "pulse-glow": {
+          "0%, 100%": {
+            opacity: "1",
+            boxShadow: "0 0 0 0 rgba(16, 185, 129, 0.7)",
+          },
+          "70%": {
+            opacity: "0.9",
+            boxShadow: "0 0 0 10px rgba(16, 185, 129, 0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bounce-gentle": "bounce-gentle 1s infinite",
+        "pulse-glow": "pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },
