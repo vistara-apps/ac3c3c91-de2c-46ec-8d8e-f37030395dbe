@@ -17,3 +17,17 @@ export interface ClickStats {
   lastClickTime: Date | null;
   isStreakActive: boolean;
 }
+
+export interface PaymentConfig {
+  amount: string;
+  currency: 'USDC';
+  network: 'base' | 'base-sepolia';
+  description?: string;
+}
+
+export interface PaymentResult {
+  success: boolean;
+  transactionHash?: string;
+  error?: string;
+  paymentResponse?: any;
+}
